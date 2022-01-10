@@ -19,4 +19,25 @@
 touch {1..100000}.txt
 ```
 
-300000 создать не получилось, это слишком дилинный список аргументов
+300000 создать не получится, это слишком дилинный список аргументов
+
+11. проверяет условие у "-d /tmp" - наличие катаолга /tmp
+12.
+
+```
+    vagrant@vagrant:~$ type -a bash
+    bash is /usr/bin/bash
+    bash is /bin/bash
+    vagrant@vagrant:~$ mkdir /tmp/new_path_directory/
+    vagrant@vagrant:~$ cp /bin/bash /tmp/new_path_directory/
+    vagrant@vagrant:~$ PATH=/tmp/new_path_directory/:$PATH
+    vagrant@vagrant:~$ type -a bash
+    bash is /tmp/new_path_directory/bash
+    bash is /usr/bin/bash
+    bash is /bin/bash
+    vagrant@vagrant:~$
+```
+
+13. 
+at - команда запускается в указанное время (в параметре)
+batch - запускается когда уровень загрузки системы снизится ниже 1.5.
